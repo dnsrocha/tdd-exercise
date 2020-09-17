@@ -23,13 +23,25 @@ describe 'Blackjack Score' do
 
   it 'facecards have values calculated correctly' do
     # Arrange
-    hand = ["Jack", "Queen", "King"]
+    hand = ["Jack", "Queen"]
 
     # Act
     score = blackjack_score(hand)
 
     # Assert <-  You do this part!
-    expect(score).must_equal 30
+    expect(score).must_equal 20
+
+  end
+
+  it 'facecards have values calculated correctly' do
+    # Arrange
+    hand = ["King", 9]
+
+    # Act
+    score = blackjack_score(hand)
+
+    # Assert <-  You do this part!
+    expect(score).must_equal 19
 
   end
 
@@ -68,7 +80,7 @@ describe 'Blackjack Score' do
 
   it 'raises an ArgumentError for scores over 21' do
     # Arrange
-    hand = [24]
+    hand = [9, 3, "Jack"]
 
     # Act + Assert <-  You do this part!
     expect {
