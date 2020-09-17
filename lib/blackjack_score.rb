@@ -27,7 +27,7 @@ def blackjack_score(hand)
   end
 
   if score > 21
-    raise ArgumentError.new("Hand is a bust (#{score.to_i}). You lost.")
+    raise ArgumentError.new("Bust Hand (#{score.to_i}). You lost.")
   end
 
   return score
